@@ -1,18 +1,18 @@
-# Lab 1: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 1: Jakub_Chrastek
 
 ### De Morgan's laws
 
 1. Equations of all three versions of logic function f(c,b,a):
 
-   ![326253462_578724260882497_5907499848753688568_n](https://user-images.githubusercontent.com/124879589/218319076-2436b400-79a1-4e36-a8d0-3b74c056db84.jpg)
+  
 2. Listing of VHDL architecture from design file (`design.vhd`) for all three functions. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
 ```vhdl
 architecture dataflow of gates is
 begin
-    f_orig_o <= (not(b_i) and a_i) or (c_i and not(b_i or not(a_i)));
-    f_nand_o <= b_i nand a_i; -- MODIFY THIS FUNCTION
-    f_nor_o  <= b_i nor a_i;  -- MODIFY THIS FUNCTION
+  f_orig_o <= (not(b_i) and a_i) or (c_i and not(b_i or not(a_i)));
+  f_nand_o <= not(not(not(b_i) and a_i) and not(c_i and (not(b_i) and a_i)));
+  f_nor_o  <= (not(b_i or not(a_i))) or not(not(c_i) or (b_i or not(a_i)));
 end architecture dataflow;
 ```
 
