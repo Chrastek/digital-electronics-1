@@ -1,4 +1,4 @@
-# Lab 2: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 2: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAMEE
 
 ### 2-bit comparator
 
@@ -26,7 +26,7 @@
     p_stimulus : process
     begin
         -- Report a note at the beginning of stimulus process
-        report "Stimulus process started";
+        report "Stimulus process started" severity note;
 
         -- First test case
         s_b <= "BCD_OF_YOUR_SECOND_LAST_ID_DIGIT"; -- Such as "0101" if ID = xxxx56
@@ -40,7 +40,7 @@
         report "Input combination COMPLETE_THIS_TEXT FAILED" severity error;
 
         -- Report a note at the end of stimulus process
-        report "Stimulus process finished";
+        report "Stimulus process finished" severity note;
         wait;
     end process p_stimulus;
 ```
@@ -48,3 +48,4 @@
 2. Link to your public EDA Playground example:
 
    [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
+
