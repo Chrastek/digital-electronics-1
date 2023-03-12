@@ -53,13 +53,13 @@ begin
     p_t_ff_rst : process(clk)
     begin   
         if rising_edge(clk) then
-        if rst = '1'then
+            if rst = '1'then
                 sig_q <= '0';
-        elsif t = '0' then
+            elsif t = '0' then
                 sig_q <= sig_q;
-        else
+            else
                 sig_q <= not(sig_q);            
-        end if;
+            end if;
         end if;
     end process p_t_ff_rst;
 
